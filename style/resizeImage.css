@@ -1,0 +1,52 @@
+.view-ResizeImage {
+    pointer-events: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 60px;
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0);
+    opacity: 0;
+    overflow: hidden;
+}
+
+.rezise-image-back {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 33px;
+    z-index: 99;
+}
+
+.rezise-image-back > svg {
+    fill: black;
+}
+
+.rezise-image {
+    width: 250px;
+    height: 250px;
+}
+
+.zoomist-slider,
+.zoomist-zoomer {
+    display: none;
+}
+
+.zoomist-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}

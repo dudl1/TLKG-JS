@@ -1,0 +1,46 @@
+.card {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 400px;
+    height: 260px;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.card:first-child {
+    margin-top: 30px;
+}
+
+.card-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.card-title {
+    position: relative;
+    pointer-events: none;
+    margin-top: 33px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 23px;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    z-index: 999;
+}
+
+.card-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.13;
+}
+
+.filling {
+    height: 9px;
+}

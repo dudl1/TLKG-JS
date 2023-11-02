@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta name="apple-mobile-web-app-capable" content="yes">-->
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Volk</title>
+    <style>
+        html,
+        body,
+        #app {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background: black;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+        }
+        .view {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            border-radius: 0;
+            -webkit-transition: .5s cubic-bezier(0.42, 0, 0, 0.96);
+            transition: .5s cubic-bezier(0.42, 0, 0, 0.96);
+            -webkit-transform: scale(1);
+                    transform: scale(1);
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+        ::-webkit-scrollbar {
+            width: 0;
+        }
+    </style>
+    <script src="App.js" type="module"></script>
+</head>
+<body>
+    <link rel="stylesheet" href="./style/card.css">
+    <link rel="stylesheet" href="./style/communication.css">
+    <link rel="stylesheet" href="./style/resizeImage.css">
+    <link rel="stylesheet" href="./style/transition.css">
+    <link rel="stylesheet" src="https://cdn.jsdelivr.net/npm/zoomist@1/dist/zoomist.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/zoomist@1/dist/zoomist.min.js"></script>
+
+    <div id="app">
+
+        <div class="view view-card">
+            <div class="filling"></div>
+        </div>
+
+        <div class="view view-communication">
+            <div class="communication-header">
+                <span class="communication-header-label"></span>
+                <div class="communication-header-back">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512.021 512.021" style="enable-background:new 0 0 512.021 512.021;" xml:space="preserve" width="17" height="17">
+                        <g>
+                            <path d="M301.258,256.01L502.645,54.645c12.501-12.501,12.501-32.769,0-45.269c-12.501-12.501-32.769-12.501-45.269,0l0,0   L256.01,210.762L54.645,9.376c-12.501-12.501-32.769-12.501-45.269,0s-12.501,32.769,0,45.269L210.762,256.01L9.376,457.376   c-12.501,12.501-12.501,32.769,0,45.269s32.769,12.501,45.269,0L256.01,301.258l201.365,201.387   c12.501,12.501,32.769,12.501,45.269,0c12.501-12.501,12.501-32.769,0-45.269L301.258,256.01z"/>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="communication-loader-bool">
+                <div class="communication-loader"></div>
+            </div>
+            <div class="communication-list"></div>
+        </div>
+
+        <div class="view view-ResizeImage">
+            <div class="rezise-image">
+                <div class="rezise-image-back">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512.021 512.021" style="enable-background:new 0 0 512.021 512.021;" xml:space="preserve" width="17" height="17">
+                        <g>
+                            <path d="M301.258,256.01L502.645,54.645c12.501-12.501,12.501-32.769,0-45.269c-12.501-12.501-32.769-12.501-45.269,0l0,0   L256.01,210.762L54.645,9.376c-12.501-12.501-32.769-12.501-45.269,0s-12.501,32.769,0,45.269L210.762,256.01L9.376,457.376   c-12.501,12.501-12.501,32.769,0,45.269s32.769,12.501,45.269,0L256.01,301.258l201.365,201.387   c12.501,12.501,32.769,12.501,45.269,0c12.501-12.501,12.501-32.769,0-45.269L301.258,256.01z"/>
+                        </g>
+                    </svg>
+                </div>
+                <div class="rezise-image">
+                    <div id="zoomist" data-zoomist-src="images/default.PNG"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

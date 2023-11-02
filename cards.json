@@ -1,0 +1,47 @@
+[
+    {
+        "title": "Логистика складирования",
+        "imagePath": "images/logist_skladirovaniya.png",
+        "color": "E09A00"
+    },
+    {
+        "title": "Логистика распределения",
+        "imagePath": "images/logist_raspredelenie.png",
+        "color": "E4AC80"
+    },
+    {
+        "title": "Конкурентоспособность в поставках",
+        "imagePath": "images/konkr_v_postavkax.png",
+        "color": "E49880"
+    },
+    {
+        "title": "Виртуальные цепи поставок",
+        "imagePath": "images/virt_cp_postavok.png",
+        "color": "8880E4"
+    },
+    {
+        "title": "Финансовый менеджмент",
+        "imagePath": "images/fin_menedzment.png",
+        "color": "459BCC"
+    },
+    {
+        "title": "Осуществление гос.закупок",
+        "imagePath": "images/osush_goz_zakupok.png",
+        "color": "E4D480"
+    },
+    {
+        "title": "Закупки в контр. системе",
+        "imagePath": "images/zakupki_v_kontr_sisteme.png",
+        "color": "80E48A"
+    },
+    {
+        "title": "Методы управлен. решений",
+        "imagePath": "images/metodi_ypr_resheniy.png",
+        "color": "938659"
+    },
+    {
+        "title": "Обеспечение эффектив. логистики",
+        "imagePath": "images/obespechenie_effectiv_logistiki.png",
+        "color": "649576"
+    }
+]

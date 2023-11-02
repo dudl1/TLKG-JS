@@ -1,0 +1,98 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.view-communication {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 30px 30px 0 0 !important;
+    overflow: hidden;
+}
+
+.communication-header {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    z-index: 99;
+}
+
+.communication-header-label {
+    display: block;
+    padding: 13px 13px 13px 17px;
+    border-radius: 40px 0 0 40px;
+    font-size: 17px;
+    color: white;
+}
+
+.communication-header-back {
+    display: block;
+    width: 17px;
+    height: 17px;
+    padding: 16px 16px 16px 0;
+    border-radius: 0 40px 40px 0;
+    fill: white;
+}
+
+.communication-header-back > svg {
+    width: 14px;
+    height: 14px;
+}
+
+.communication-list {
+    margin-top: 13px;
+    margin-bottom: 40px;
+    overflow-y: scroll;
+    transition: .5s cubic-bezier(0.42, 0, 0, 0.96);
+}
+
+.communication-date {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.communication-cover {
+    display: flex;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    scroll-behavior: smooth;
+    flex-direction: column;
+}
+
+.cover-new {
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.communication-image {
+    width: 235px;
+    height: 150px;
+    border-radius: 22px;
+    object-fit: cover;
+}
+
+.communication-loader-bool {
+    display: block;
+}
+
+.communication-loader-bool.hidden {
+    display: none;
+}
+
+.communication-loader {
+    display: block;
+    margin: auto;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 2s linear infinite;
+  }
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
