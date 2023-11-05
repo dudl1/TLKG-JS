@@ -9,6 +9,10 @@ const supabase = createClient(pass.co, pass.anon);
 const clientHeight = document.documentElement.clientHeight;
 
 
+const view_whereFunc = document.querySelector(".view-whereFunc");
+const view_whereFunc_video = document.querySelector(".view-whereFunc-video");
+
+
 const view_card = document.querySelector(".view-card");
 const view_communication = document.querySelector(".view-communication");
 const view_ResizeImage = document.querySelector(".view-ResizeImage");
@@ -65,6 +69,25 @@ for (let i = 0; i < card.length; i++)
         communication_header_back.style.background = color;
 
         communication_loader.style.cssText = `border-top: 3px solid ${color}; border-left: 3px solid ${color};`;
+
+
+        if (localStorage.getItem("view_whereFunc") == 1)
+        {
+            view_whereFunc.classList.add("hidden");
+        } else {
+            setTimeout(()=>
+            {
+                view_whereFunc.classList.add("visible");
+                view_whereFunc_video.play();
+            }, 50);
+
+            setTimeout(()=>
+            {
+                view_whereFunc.classList.add("hiddenOne");
+                localStorage.setItem("view_whereFunc", 1);
+            }, 14000);
+        }
+
 
         const dataDB = await supabase
             .from("main")
@@ -126,7 +149,8 @@ for (let i = 0; i < card.length; i++)
                             const updateMessageId = data.new.id;
                             const basicMessageId = elem.getAttribute("id");
 
-                            if (parseInt(basicMessageId) === updateMessageId) {
+                            if (parseInt(basicMessageId) === updateMessageId)
+                            {
                                 elem.children[1].innerHTML = data.new.message;
                             }
                             
@@ -142,7 +166,8 @@ for (let i = 0; i < card.length; i++)
                             const updateMessageId = data.old.id;
                             const basicMessageId = elem.getAttribute("id");
 
-                            if (parseInt(basicMessageId) === updateMessageId) {
+                            if (parseInt(basicMessageId) === updateMessageId)
+                            {
                                 elem.remove();
                                 break;
                             }
@@ -175,7 +200,7 @@ for (let i = 0; i < card.length; i++)
                     return `
                         
                         <div id="${data.id}" class="communication-cover">
-                            <span class="communication-date" style="${ formattedDate !== previousDate ? 'margin-bottom: 15px; margin-top: 15px;' : 'margin-bottom: 0 !important; margin-top: 0 !important;' }"">
+                            <span class="communication-date" style="${ formattedDate !== previousDate ? 'margin-bottom: 20px; margin-top: 8px;' : 'margin-bottom: 0 !important; margin-top: 0 !important;' }"">
                                 ${formattedDate !== previousDate ? previousDate = formattedDate : ""}
                             </span>
                             ${
@@ -228,7 +253,7 @@ communication_header_back.onclick = ()=>
     {
         communication_list.innerHTML = "";
         communication_loader_bool.classList.remove("hidden");
-    }, 100);
+    }, 50);
 };
 
 
@@ -252,5 +277,5 @@ rezise_image_back.onclick = ()=>
 
     document.querySelector(".zoomist-zoomer").remove();
     
-    setTimeout(()=> { zoom_image.update(); zoom_image.reset(); }, 400);
+    setTimeout(()=> { zoom_image.update(); zoom_image.reset(); }, 200);
 };

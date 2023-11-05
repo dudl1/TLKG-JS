@@ -6,7 +6,14 @@
     <!--<meta name="apple-mobile-web-app-capable" content="yes">-->
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <title>Volk</title>
+    <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
+    <script>
+        vkBridge.send('VKWebAppInit');
+    </script>
     <style>
+        * {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+        }
         html,
         body,
         #app {
@@ -44,6 +51,7 @@
     <link rel="stylesheet" href="./style/communication.css">
     <link rel="stylesheet" href="./style/resizeImage.css">
     <link rel="stylesheet" href="./style/transition.css">
+    <link rel="stylesheet" href="./style/viewWhereFunc.css">
     <link rel="stylesheet" src="https://cdn.jsdelivr.net/npm/zoomist@1/dist/zoomist.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/zoomist@1/dist/zoomist.min.js"></script>
 
@@ -68,6 +76,10 @@
                 <div class="communication-loader"></div>
             </div>
             <div class="communication-list"></div>
+        </div>
+
+        <div class="view view-whereFunc">
+            <video class="view-whereFunc-video" src="./assets/videoWhoFunc.mp4"></video>
         </div>
 
         <div class="view view-ResizeImage">

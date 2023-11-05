@@ -20,7 +20,7 @@
 .rezise-image-back {
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -30,6 +30,7 @@
 
 .rezise-image-back > svg {
     fill: black;
+    cursor: pointer;
 }
 
 .rezise-image {

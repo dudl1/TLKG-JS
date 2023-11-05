@@ -4,7 +4,7 @@
     margin: 20px auto;
     max-width: 400px;
     height: 260px;
-    border-radius: 25px;
+    border-radius: 35px;
     overflow: hidden;
 }
 
@@ -16,9 +16,15 @@
     position: relative;
     width: 100%;
     height: 100%;
+    cursor: pointer;
 }
 
 .card-title {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
     position: relative;
     pointer-events: none;
     margin-top: 33px;
@@ -32,6 +38,12 @@
 }
 
 .card-img {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    pointer-events: none;
     position: absolute;
     top: 0;
     left: 0;

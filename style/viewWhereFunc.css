@@ -1,0 +1,41 @@
+.view-whereFunc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    pointer-events: none;
+    opacity: 0;
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+}
+
+.view-whereFunc-video {
+    margin: 0 auto;
+    max-width: 400px;
+    width: 100%;
+}
+
+.view-whereFunc.visible {
+    pointer-events: all;
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+}
+
+.view-whereFunc.hiddenOne {
+    pointer-events: none;
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+}
+
+.view-whereFunc.hidden {
+    display: none;
+}
